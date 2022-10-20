@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using 
+using MySql.Data.MySqlClient;
 
 namespace IS1_20_KichiginIO
 {
