@@ -72,7 +72,8 @@ namespace IS1_20_KichiginIO
 
         private void AuthForm_Load(object sender, EventArgs e)
         {
-            string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_16;database=is_1_20_st16_KURS;password=44247229;";
+            //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_16;database=is_1_20_st16_KURS;password=44247229;";
+            string connStr = "server=10.90.12.110;port=33333;user=st_1_20_16;database=is_1_20_st16_KURS;password=44247229;";
             conn = new MySqlConnection(connStr);
         }
 
@@ -86,9 +87,9 @@ namespace IS1_20_KichiginIO
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                authId = reader[0].ToString();
-                authFio = reader[1].ToString();
-                authRole = Convert.ToInt32(reader[4].GetHashCode());
+                Auth.authId = reader[0].ToString();
+                Auth.authFio = reader[1].ToString();
+                Auth.authRole = Convert.ToInt32(reader[3].ToString());
             }
             reader.Close();
             conn.Close();

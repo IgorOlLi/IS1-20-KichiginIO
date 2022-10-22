@@ -14,8 +14,6 @@ namespace IS1_20_KichiginIO
 {
     public partial class MainForm : MetroForm
     {
-        string connStr = "server=caseum.ru;port=33333;user=st_1_20_16;database=is_1_20_st16_KURS;password=44247229;";
-        MySqlConnection conn;
 
         public MainForm()
         {
@@ -30,9 +28,15 @@ namespace IS1_20_KichiginIO
                 //Вы можете скрыть их и не отображать вообще, здесь они просто выключены
                 case 1:
                     metroLabel1.Text = "Админ";
+                    metroLabel2.Text = $"{Auth.authFio}";
+                    metroLabel3.Text = $"Id {Auth.authId}";
                     break;
                 case 2:
-                    metroLabel1.Text = "NaN";
+                    metroLabel1.Text = "Доступ Стандартный";
+                    metroLabel2.Text = $"{Auth.authFio}";
+                    metroLabel3.Text = $"Id {Auth.authId}";
+                    metroButton2.Enabled = false;
+                    metroButton3.Enabled = false;
                     break;
             }
         }
@@ -47,7 +51,7 @@ namespace IS1_20_KichiginIO
             //Если авторизации была успешна и в поле класса хранится истина, то делаем движуху
             this.Show();
             //Вытаскиваем из класса поля в label'ы
-            ManagerRole(authRole);
+            ManagerRole(Auth.authRole);
             }
 
         private void metroButton1_Click(object sender, EventArgs e)
