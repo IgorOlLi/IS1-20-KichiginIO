@@ -131,8 +131,9 @@
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(120, 23);
             this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "@Гость";
+            this.metroButton2.Text = "Гость";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // AuthForm
             // 

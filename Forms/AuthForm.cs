@@ -17,10 +17,6 @@ namespace IS1_20_KichiginIO
     public partial class AuthForm : MetroForm
     {
         MySqlConnection conn;
-        string authId;
-        string authFio;
-        int authRole;
-
         public AuthForm()
         {
             InitializeComponent();
@@ -28,39 +24,25 @@ namespace IS1_20_KichiginIO
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
             string sql = "SELECT * FROM T_Empl WHERE login_Empl = @un and  pass_Empl= @up";
-            //Открытие соединения
             conn.Open();
-            //Объявляем таблицу
             DataTable table = new DataTable();
-            //Объявляем адаптер
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            //Объявляем команду
             MySqlCommand command = new MySqlCommand(sql, conn);
-            //Определяем параметры
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
-            //Присваиваем параметрам значение
             command.Parameters["@un"].Value = metroTextBox1.Text;
             command.Parameters["@up"].Value = metroTextBox2.Text; //Добавить Хеширование
-            //Заносим команду в адаптер
             adapter.SelectCommand = command;
-            //Заполняем таблицу
             adapter.Fill(table);
-            //Закрываем соединение
             conn.Close();
-            //Если вернулась больше 0 строк, значит такой пользователь существует
             if (table.Rows.Count > 0)
             {
-                //Достаем данные пользователя в случае успеха
                 GetUserInfo(metroTextBox1.Text);
-                //Закрываем форму
                 this.Close();
             }
             else
             {
-                //Отобразить сообщение о том, что авторизаия неуспешна
                 MessageBox.Show("Неверные данные авторизации!");
             }
         }
@@ -93,6 +75,14 @@ namespace IS1_20_KichiginIO
             }
             reader.Close();
             conn.Close();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            Auth.authId = "0";
+            Auth.authFio = "Гость";
+            Auth.authRole = 0;
+            this.Close();
         }
     }
 }
