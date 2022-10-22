@@ -31,18 +31,28 @@ namespace IS1_20_KichiginIO
                 case 1:
                     metroLabel1.Text = "Админ";
                     break;
+                case 2:
+                    metroLabel1.Text = "NaN";
+                    break;
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-        }
+            this.Hide();
+            //Инициализируем и вызываем форму диалога авторизации
+            AuthForm authForm = new AuthForm();
+            //Вызов формы в режиме диалога
+            authForm.ShowDialog();
+            //Если авторизации была успешна и в поле класса хранится истина, то делаем движуху
+            this.Show();
+            //Вытаскиваем из класса поля в label'ы
+            ManagerRole(authRole);
+            }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            AuthForm authForm = new AuthForm();
-            authForm.ShowDialog();
+
         }
     }
 }
