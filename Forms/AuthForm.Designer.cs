@@ -99,11 +99,13 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(149, 159);
+            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.metroButton1.Location = new System.Drawing.Point(150, 159);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(120, 23);
+            this.metroButton1.Size = new System.Drawing.Size(119, 23);
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Войти";
+            this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -127,11 +129,13 @@
             // 
             // metroButton2
             // 
+            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroButton2.Location = new System.Drawing.Point(23, 159);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(120, 23);
+            this.metroButton2.Size = new System.Drawing.Size(121, 23);
             this.metroButton2.TabIndex = 5;
             this.metroButton2.Text = "Гость";
+            this.metroButton2.UseCustomBackColor = true;
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
@@ -147,7 +151,11 @@
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
             this.Name = "AuthForm";
+            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Авторизация";
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Load += new System.EventHandler(this.AuthForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

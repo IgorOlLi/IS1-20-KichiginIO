@@ -47,9 +47,15 @@ namespace IS1_20_KichiginIO
             authForm.ShowDialog();
             this.Show();
             ManagerRole(Auth.authRole);
-            }
+       
+        }
 
         private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
         {
 
         }

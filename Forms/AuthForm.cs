@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using MetroFramework.Controls;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IS1_20_KichiginIO
 {
