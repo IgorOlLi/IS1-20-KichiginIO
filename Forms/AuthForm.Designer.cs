@@ -99,7 +99,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.metroButton1.BackColor = System.Drawing.Color.Gray;
             this.metroButton1.Location = new System.Drawing.Point(150, 159);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(119, 23);
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 202);
+            this.ClientSize = new System.Drawing.Size(294, 203);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);

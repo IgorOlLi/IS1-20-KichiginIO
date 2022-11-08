@@ -20,6 +20,18 @@ namespace IS1_20_KichiginIO
         {
             InitializeComponent();
         }
+        static string sha256(string randomString)
+        {
+            //Тут происходит криптографическая магия. Смысл данного метода заключается в том, что строка залетает в метод
+            var crypt = new System.Security.Cryptography.SHA256Managed();
+            var hash = new System.Text.StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(randomString));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            return hash.ToString();
+        }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
@@ -31,7 +43,7 @@ namespace IS1_20_KichiginIO
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
             command.Parameters["@un"].Value = metroTextBox1.Text;
-            command.Parameters["@up"].Value = metroTextBox2.Text; //Добавить Хеширование
+            command.Parameters["@up"].Value = sha256(metroTextBox2.Text); 
             adapter.SelectCommand = command;
             adapter.Fill(table);
             conn.Close();
@@ -78,9 +90,9 @@ namespace IS1_20_KichiginIO
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            Auth.authId = "0";
-            Auth.authFio = "Гость";
-            Auth.authRole = 0;
+            Auth.authId = "1";
+            Auth.authFio = "Врем";
+            Auth.authRole = 1;
             this.Close();
         }
     }

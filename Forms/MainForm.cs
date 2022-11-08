@@ -59,5 +59,20 @@ namespace IS1_20_KichiginIO
         {
 
         }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AuthForm authForm = new AuthForm();
+            authForm.ShowDialog();
+            this.Show();
+            ManagerRole(Auth.authRole);
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            Form1 redprofForm = new Form1();
+            redprofForm.ShowDialog();
+        }
     }
 }

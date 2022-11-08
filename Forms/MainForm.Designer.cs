@@ -49,7 +49,7 @@ namespace IS1_20_KichiginIO
             // 
             // metroButton1
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.Aquamarine;
+            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroButton1.Location = new System.Drawing.Point(23, 63);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(247, 23);
@@ -70,7 +70,7 @@ namespace IS1_20_KichiginIO
             // 
             // metroButton2
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.Aquamarine;
+            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroButton2.Location = new System.Drawing.Point(23, 92);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(247, 23);
@@ -81,14 +81,15 @@ namespace IS1_20_KichiginIO
             // 
             // metroButton3
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.Aquamarine;
+            this.metroButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.metroButton3.Location = new System.Drawing.Point(23, 121);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(247, 23);
             this.metroButton3.TabIndex = 5;
-            this.metroButton3.Text = "@Редактор Профилей";
+            this.metroButton3.Text = "Редактор Профилей";
             this.metroButton3.UseCustomBackColor = true;
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroLabel3
             // 
@@ -101,7 +102,7 @@ namespace IS1_20_KichiginIO
             // 
             // metroButton4
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.metroButton4.BackColor = System.Drawing.Color.Gray;
             this.metroButton4.Location = new System.Drawing.Point(144, 245);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(126, 23);
@@ -109,6 +110,7 @@ namespace IS1_20_KichiginIO
             this.metroButton4.Text = "Смена Пользователя";
             this.metroButton4.UseCustomBackColor = true;
             this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             // 
             // MainForm
             // 
@@ -124,7 +126,7 @@ namespace IS1_20_KichiginIO
             this.Controls.Add(this.metroLabel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "MainForm";
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Фильморно";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
