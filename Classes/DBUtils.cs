@@ -11,7 +11,7 @@ namespace IS1_20_KichiginIO
     {
         public static MySqlConnection GetDBConnection()
         {
-            string host = "10.90.12.110";
+            //string host = "10.90.12.110";
             //string host = "caseum.ru";
             string port = "33333";
             string database = "is_1_20_st16_KURS";
