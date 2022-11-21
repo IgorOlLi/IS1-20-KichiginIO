@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IS1_20_KichiginIO
 {
-    class Auth
+    static class Auth
     {
         public static string authId;
         public static string authFio;

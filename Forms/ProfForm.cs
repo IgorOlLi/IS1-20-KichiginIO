@@ -14,6 +14,7 @@ namespace IS1_20_KichiginIO
 {
     public partial class Form1 : MetroForm
     {
+        MySqlConnection conn;
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace IS1_20_KichiginIO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            conn = DBUtils.GetDBConnection();
         }
 
         private void metroButton3_Click(object sender, EventArgs e)

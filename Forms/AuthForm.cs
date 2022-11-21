@@ -65,9 +65,7 @@ namespace IS1_20_KichiginIO
 
         private void AuthForm_Load(object sender, EventArgs e)
         {
-            //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_16;database=is_1_20_st16_KURS;password=44247229;";
-            string connStr = "server=10.90.12.110;port=33333;user=st_1_20_16;database=is_1_20_st16_KURS;password=44247229;";
-            conn = new MySqlConnection(connStr);
+            conn = DBUtils.GetDBConnection();
         }
 
         public void GetUserInfo(string login_user)
