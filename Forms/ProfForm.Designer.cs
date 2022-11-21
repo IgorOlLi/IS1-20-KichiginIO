@@ -272,6 +272,7 @@ namespace IS1_20_KichiginIO
             this.metroButton1.Text = "@Создать";
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 

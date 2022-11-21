@@ -9,28 +9,12 @@ namespace IS1_20_KichiginIO.Classes
 {
     class User
     {
-        public static int userId;
-        public static string userFio;
-        public static string userPhone;
-        public static int UserAccess;
-        public static string userLogin;
-        public static string userPassword;
-        public static int userProf;
-
-        void UserCreate()
-        {
-            conn = DBUtils.GetDBConnection();
-            string sql = $"INSERT INTO T_Empl ()";
-        }
-
-        void UserDelete()
-        {
-            string sql = $"";
-        }
-
-        void UserChange()
-        {
-            string sql = $"";
-        }
+        public static int id = 0;
+        public static string fio;
+        public static string phone;
+        public static int access = 0;
+        public static string login;
+        public static string password;
+        public static int prof = 0;
     }
 }
