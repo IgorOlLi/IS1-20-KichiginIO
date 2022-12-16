@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Classes\Auth.cs" />
     <Compile Include="Classes\DBUtils.cs" />
+    <Compile Include="Classes\Enigma.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\ProfForm.cs">
       <SubType>Form</SubType>

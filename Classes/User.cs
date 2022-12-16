@@ -9,12 +9,12 @@ namespace IS1_20_KichiginIO.Classes
 {
     class User
     {
-        public static int id = 0;
+        public static string id;
         public static string fio;
         public static string phone;
-        public static int access = 0;
+        public static string access;
         public static string login;
         public static string password;
-        public static int prof = 0;
+        public static string spec;
     }
 }

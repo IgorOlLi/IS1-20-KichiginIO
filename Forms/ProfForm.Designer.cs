@@ -32,7 +32,6 @@ namespace IS1_20_KichiginIO
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
@@ -47,6 +46,7 @@ namespace IS1_20_KichiginIO
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroTextBox1
@@ -83,31 +83,21 @@ namespace IS1_20_KichiginIO
             // 
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(23, 82);
+            this.metroComboBox1.Location = new System.Drawing.Point(23, 244);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(257, 29);
-            this.metroComboBox1.TabIndex = 4;
+            this.metroComboBox1.TabIndex = 5;
             this.metroComboBox1.UseSelectable = true;
             // 
             // metroComboBox2
             // 
             this.metroComboBox2.FormattingEnabled = true;
             this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(23, 244);
+            this.metroComboBox2.Location = new System.Drawing.Point(23, 406);
             this.metroComboBox2.Name = "metroComboBox2";
             this.metroComboBox2.Size = new System.Drawing.Size(257, 29);
-            this.metroComboBox2.TabIndex = 5;
+            this.metroComboBox2.TabIndex = 6;
             this.metroComboBox2.UseSelectable = true;
-            // 
-            // metroComboBox3
-            // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Location = new System.Drawing.Point(23, 406);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(257, 29);
-            this.metroComboBox3.TabIndex = 6;
-            this.metroComboBox3.UseSelectable = true;
             // 
             // metroTextBox2
             // 
@@ -269,7 +259,7 @@ namespace IS1_20_KichiginIO
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(171, 29);
             this.metroButton1.TabIndex = 18;
-            this.metroButton1.Text = "@Создать";
+            this.metroButton1.Text = "Создать";
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
@@ -309,11 +299,42 @@ namespace IS1_20_KichiginIO
             this.metroButton4.UseCustomBackColor = true;
             this.metroButton4.UseSelectable = true;
             // 
+            // metroTextBox5
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox5.CustomButton.Image = null;
+            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(229, 1);
+            this.metroTextBox5.CustomButton.Name = "";
+            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox5.CustomButton.TabIndex = 1;
+            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox5.CustomButton.UseSelectable = true;
+            this.metroTextBox5.CustomButton.Visible = false;
+            this.metroTextBox5.Lines = new string[0];
+            this.metroTextBox5.Location = new System.Drawing.Point(23, 82);
+            this.metroTextBox5.MaxLength = 32767;
+            this.metroTextBox5.Name = "metroTextBox5";
+            this.metroTextBox5.PasswordChar = '\0';
+            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox5.SelectedText = "";
+            this.metroTextBox5.SelectionLength = 0;
+            this.metroTextBox5.SelectionStart = 0;
+            this.metroTextBox5.ShortcutsEnabled = true;
+            this.metroTextBox5.Size = new System.Drawing.Size(257, 29);
+            this.metroTextBox5.TabIndex = 22;
+            this.metroTextBox5.UseSelectable = true;
+            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 458);
+            this.Controls.Add(this.metroTextBox5);
             this.Controls.Add(this.metroButton4);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
@@ -328,7 +349,6 @@ namespace IS1_20_KichiginIO
             this.Controls.Add(this.metroTextBox4);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroComboBox3);
             this.Controls.Add(this.metroComboBox2);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroTextBox1);
@@ -346,7 +366,6 @@ namespace IS1_20_KichiginIO
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
@@ -361,5 +380,6 @@ namespace IS1_20_KichiginIO
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroTextBox metroTextBox5;
     }
 }
