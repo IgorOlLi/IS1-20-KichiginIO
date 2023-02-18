@@ -33,7 +33,6 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroTextBox1
@@ -100,9 +99,9 @@
             // metroButton1
             // 
             this.metroButton1.BackColor = System.Drawing.Color.Gray;
-            this.metroButton1.Location = new System.Drawing.Point(150, 159);
+            this.metroButton1.Location = new System.Drawing.Point(23, 159);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(119, 23);
+            this.metroButton1.Size = new System.Drawing.Size(246, 23);
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Войти";
             this.metroButton1.UseCustomBackColor = true;
@@ -127,24 +126,11 @@
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "Пароль";
             // 
-            // metroButton2
-            // 
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.metroButton2.Location = new System.Drawing.Point(23, 159);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(121, 23);
-            this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "Гость";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
-            // 
             // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 203);
-            this.Controls.Add(this.metroButton2);
+            this.ClientSize = new System.Drawing.Size(294, 198);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroButton1);
@@ -169,6 +155,5 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

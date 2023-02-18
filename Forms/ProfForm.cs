@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using IS1_20_KichiginIO.Classes;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace IS1_20_KichiginIO
 {
@@ -112,7 +113,12 @@ namespace IS1_20_KichiginIO
         private void metroButton1_Click(object sender, EventArgs e)
         {
             User.fio = metroTextBox1.Text;
-            User.phone = metroTextBox2.Text;
+            string phoneNumber = metroTextBox2.Text;
+            string pattern = @"\D";
+            string target = "";
+            Regex regex = new Regex(pattern);
+            string result = regex.Replace(phoneNumber, target);
+            User.phone = result;
             User.access = metroComboBox1.SelectedValue.ToString();
             User.login = metroTextBox3.Text;
             User.password = Enigma.sha256(metroTextBox4.Text);

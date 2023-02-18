@@ -78,10 +78,7 @@ namespace IS1_20_KichiginIO
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            Auth.authId = "1";
-            Auth.authFio = "Врем";
-            Auth.authRole = 1;
-            this.Close();
+            
         }
     }
 }
